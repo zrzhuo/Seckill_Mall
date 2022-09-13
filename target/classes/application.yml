@@ -53,7 +53,8 @@ spring:
         max-active: 8 # 最大连接数
         max-idle: 8 # 最大空闲连接数
         min-idle: 5 # 最小空闲连接数
-        max-wait: 10000ms # 连接的最大等待时间
+        max-wait: 1000ms # 连接的最大等待时间
+
 
   # RabbitMQ配置
   rabbitmq:
