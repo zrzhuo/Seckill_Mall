@@ -17,7 +17,7 @@ public class RedisConfig {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         // 设置连接工厂
         redisTemplate.setConnectionFactory(redisConnectionFactory);
-        // 设置key的自动序列化方式
+        // 设置key的自动序列化方式 
         redisTemplate.setKeySerializer(RedisSerializer.string());
         redisTemplate.setHashKeySerializer(RedisSerializer.string());
         // 设置value的自动序列化方式

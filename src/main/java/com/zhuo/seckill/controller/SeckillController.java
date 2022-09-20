@@ -2,7 +2,6 @@ package com.zhuo.seckill.controller;
 
 import com.alibaba.fastjson2.JSONObject;
 import com.wf.captcha.SpecCaptcha;
-import com.zhuo.seckill.entity.Order;
 import com.zhuo.seckill.entity.SeckillMessage;
 import com.zhuo.seckill.entity.SeckillOrder;
 import com.zhuo.seckill.entity.User;
@@ -10,18 +9,14 @@ import com.zhuo.seckill.rabbitmq.MQSender;
 import com.zhuo.seckill.service.GoodsService;
 import com.zhuo.seckill.service.OrderService;
 import com.zhuo.seckill.service.SeckillOrderService;
-import com.zhuo.seckill.service.UserService;
 import com.zhuo.seckill.vo.SeckillGoodsVo;
 import com.zhuo.seckill.vo.RespBean;
 import com.zhuo.seckill.vo.RespBeanEnum;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -77,7 +72,7 @@ public class SeckillController implements InitializingBean {
      */
     @RequestMapping(value = "/doSeckill/{path}", method = RequestMethod.POST)
     @ResponseBody
-    public RespBean doSeckill2(User user, Long goodsId, @PathVariable String path){
+    public RespBean doSeckill(User user, Long goodsId, @PathVariable String path){
         // 用户未登录
         if(user == null){
             return RespBean.error(RespBeanEnum.ACCESS_LIMIT);
