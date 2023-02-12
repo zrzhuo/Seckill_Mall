@@ -1,3 +1,11 @@
-/target
 .idea
-.DS_Store
+*.iml
+*.iws
+*.ipr
+
+.vscode/
+.devcontainer
+
+/target
+
+**/.DS_Store
