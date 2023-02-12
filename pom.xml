@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.zhuo</groupId>
-    <artifactId>seckill</artifactId>
+    <artifactId>seckill_mall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>seckill</name>
-    <description>seckill</description>
+    <name>seckill-mall</name>
+    <description>seckill-mall</description>
 
     <properties>
         <java.version>1.8</java.version>
