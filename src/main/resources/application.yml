@@ -59,8 +59,8 @@ spring:
   # RabbitMQ配置
   rabbitmq:
     host: localhost # 服务器地址
-    username: zrzhuo # 用户名
-    password: 123456 # 密码
+    username: guest # 用户名
+    password: guest # 密码
     virtual-host: / # 虚拟主机
     port: 5672  #端口
     listener:

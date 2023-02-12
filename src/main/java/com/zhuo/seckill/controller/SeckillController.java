@@ -83,7 +83,7 @@ public class SeckillController implements InitializingBean {
         if(path == null || !path.equals(realPath)){
             return RespBean.error(RespBeanEnum.ERROR_PATH);
         }
-        // 在内存中(isEmptyStock)判断当前商库存是否为0
+        // 在内存中(isEmptyStock)判断当前商品库存是否为0
         if(isEmptyStock.get(goodsId)){
             return RespBean.error(RespBeanEnum.EMPTY_STOCK);
         }
@@ -163,7 +163,7 @@ public class SeckillController implements InitializingBean {
      * 该方法会在所有Bean属性都装配完毕后自动调用, 可用来进行一些初始化操作
      */
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         List<SeckillGoodsVo> seckillGoods = goodsService.getSeckillGoods();
         if(CollectionUtils.isEmpty(seckillGoods)){
             return;
